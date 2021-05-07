@@ -29,7 +29,7 @@ module.exports={
         },
         profile   : {
             entry: './src/Profile/main.js',       // NO I18N
-            filename: 'profile.html',                               // NO I18N
+            filename: 'profile',                               // NO I18N
             title: 'profile',                                    // NO I18N
             chunks: ['chunk-vendors', 'chunk-common', 'profile']  // NO I18N
         }
@@ -78,7 +78,7 @@ module.exports={
         // }
     },
     lintOnSave  : false,
-    publicPath  : '/Portfolio/',// NO I18N
+    publicPath  : '/',// NO I18N
     devServer : {
         disableHostCheck : true,
         host  : host,
@@ -106,7 +106,7 @@ module.exports={
         // }
         proxy : {
             '/':{
-                target:'http://192.168.1.5:8010',
+                target:'http://localhost:8080',
                 changeOrigin:true
             }
         } // NO I18N

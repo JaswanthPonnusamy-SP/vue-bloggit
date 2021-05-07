@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background: #e3e8ee">
   <Navbar
           name="Blogg It"
           :navLinks="[
@@ -24,7 +24,6 @@
 
       ]"
   />
-
 <router-view></router-view>
   </div>
 </template>
@@ -48,8 +47,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#nav {
-  padding: 30px;
+nav {
+  width: 1100px;
+  margin: auto;
+  background: white;
 }
 #nav a {
   font-weight: bold;

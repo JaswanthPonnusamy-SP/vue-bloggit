@@ -4,7 +4,7 @@ import Signin from '../views/signIn'
 
 const routes = [
   {
-    path: '/Portfolio/signin.html',
+    path: '/signin.html',
     name: 'signin',
     component:Signin
   }

@@ -13,7 +13,7 @@
             </div>
           </div>
 
-          <form method="post" action="/Portfolio/LogInServlet">
+          <form method="post" action="/LogInServlet">
           <div style="margin-top: 40px;position: relative">
               <input type="text" class="input" name="username" id="username" placeholder=" " ref="hu" autocomplete="off">
             <label for="username">Username</label>

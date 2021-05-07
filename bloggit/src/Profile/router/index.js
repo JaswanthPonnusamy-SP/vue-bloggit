@@ -4,9 +4,10 @@ import Profile from '../views/Profile'
 
 const routes = [
   {
-    path: '/profile.html',
+    path: '/profile/:id',
     name: 'profile',
-    component:Profile
+    component:Profile,
+    props: true
   }
 ]
 

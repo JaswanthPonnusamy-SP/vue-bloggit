@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background: #e3e8ee">
   <Navbar
           name="Blogg It"
           :navLinks="[

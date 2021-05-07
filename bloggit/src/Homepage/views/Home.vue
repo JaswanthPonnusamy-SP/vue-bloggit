@@ -368,7 +368,7 @@ export default {
     }
   },
   mounted() {
-    this.GET("/Portfolio/SuggestionsServlet").then((message)=>{
+    this.GET("/SuggestionsServlet").then((message)=>{
       let jsonObj=JSON.parse(message);
 
       jsonObj.DATA.forEach((element,index)=>{
@@ -390,22 +390,19 @@ export default {
 
     });
 
-    this.GET("/Portfolio/CreatorServlet").then((message)=>{
+    this.GET("/CreatorServlet").then((message)=>{
       let jsonObj=JSON.parse(message);
-
       jsonObj.DATA.forEach((element,index)=>{
         this.bloggersToFollow.push(element);
       });
 
     });
 
-    this.GET("/Portfolio/index").then((message)=>{
+    this.GET("/index").then((message)=>{
       let jsonObj=JSON.parse(message);
-
       jsonObj.DATA.forEach((element,index)=>{
         this.popularBlogs.push(element);
       });
-
     });
   },
   methods:{
