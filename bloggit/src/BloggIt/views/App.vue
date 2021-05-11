@@ -1,6 +1,6 @@
 <template>
-  <div style="background: #e3e8ee">
-  <div style="width: 1200px;margin: auto;">
+  <div style="">
+  <div style="width: 1200px;margin: auto;background: white;">
     <nav>
       <div id="logo">
         Blogg It

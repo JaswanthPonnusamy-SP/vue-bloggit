@@ -1,6 +1,6 @@
 <template>
-  <div style="background: #e3e8ee">
-    <div style="width: 1200px;margin: auto;">
+  <div>
+    <div style="width: 1200px;margin: auto;background: white">
   <Navbar
           name="Blogg It"
           :navLinks="[

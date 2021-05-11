@@ -1,6 +1,6 @@
 <template>
-  <div style="background: #e3e8ee">
-  <Navbar
+  <div>
+  <Navbar style="background: white;"
           name="Blogg It"
           :navLinks="[
 
@@ -48,7 +48,7 @@ export default {
 }
 
 nav {
-  width: 1100px;
+  width: 1200px;
   margin: auto;
   background: white;
 }

@@ -128,7 +128,7 @@
                 <div class="profile-description">{{ item.DESCRIPTION }}</div>
               </div>
               <div class="profile-button-container">
-                <div class="profile-follow-button">Follow</div>
+                <div class="profile-follow-button" style="background: #409eff;border-color: #409eff;">Following</div>
               </div>
             </div>
           </div>
