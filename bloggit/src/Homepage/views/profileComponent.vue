@@ -9,7 +9,7 @@
       <div class="profile-description">{{ data.DESCRIPTION }}</div>
     </div>
     <div class="profile-button-container">
-      <div class="profile-follow-button" :style="follow==='Follow'?'cursor: pointer;':'cursor: pointer;background: #409eff;border-color: #409eff;'" @click="followww()">{{follow}}</div>
+      <el-button class="profile-follow-button" :disabled="disabled" :style="follow==='Follow'?'cursor: pointer;':'cursor: pointer;background: #409eff;border-color: #409eff;'" @click="followww()">{{follow}}</el-button>
     </div>
   </div>
 </template>
@@ -21,19 +21,21 @@ export default {
     data:Object
   },
   data() {
-    return{error:{show:false,message:""},follow:"Follow"}
+    return{error:{show:false,message:""},follow:"Follow",disabled:false}
   },
   methods:{
       followww() {
         let userId=this.data.LINK.split('/')[this.data.LINK.split('/').length-1];
+        this.disabled=true;
         if(this.follow==="Follow") {
           this.GET("/Follow?userid=" + userId).then(
               (message) => {
                 let jsonObj = JSON.parse(message);
+                this.disabled=false;
                 if (jsonObj.MESSAGE === "success") {
                   this.error.show = true;
                   this.error.message = "Successfully followed."
-                  this.follow = "Following";
+                  this.follow = "Unfollow";
                   setTimeout(() => {
                     this.error = false;
                     this.error.message = ""
@@ -41,7 +43,7 @@ export default {
                 } else {
                   this.error.show = true;
                   this.error.message = "Already following this account."
-                  this.follow = "Following";
+                  this.follow = "Unfollow";
                   setTimeout(() => {
                     this.error = false;
                     this.error.message = ""
@@ -54,6 +56,7 @@ export default {
           this.GET("/Unfollow?userid=" + userId).then(
               (message) => {
                 let jsonObj = JSON.parse(message);
+                this.disabled=false;
                 if (jsonObj.MESSAGE === "success") {
                   this.error.show = true;
                   this.error.message = "Successfully unfollowed."
