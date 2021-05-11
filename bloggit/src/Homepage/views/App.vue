@@ -3,7 +3,7 @@
   <div style="width: 1200px;margin: auto;background: white">
     <nav>
       <div id="logo">
-      Blogg It
+      Blogg It!
       </div>
 
       <ul class="nav-links">
@@ -20,7 +20,7 @@
           </svg>
         </li>
         <li>
-          <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg @click="window.location.href='https://localhost:8080/Bloggit.html'" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Desktop-HD" transform="translate(-1006.000000, -472.000000)" fill="#000000" fill-rule="nonzero">
                 <g id="fluent-save-copy-24-regular" transform="translate(1004.000000, 470.000000)">
@@ -41,7 +41,8 @@
                 <rect id="Rectangle" fill-opacity="0" x="0" y="0" width="25" height="25"></rect>
               </g>
             </g>
-          </svg></li>
+          </svg>
+        </li>
 
         <li style="margin-right: 0 !important;">
           <img id="image" src="https://miro.medium.com/fit/c/64/64/0*d77f12-7zU6s-B_f.jpg">
