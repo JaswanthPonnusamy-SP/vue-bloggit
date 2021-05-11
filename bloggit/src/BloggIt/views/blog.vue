@@ -2,7 +2,7 @@
   <div>
   <div style='width: 680px;height: max-content;margin: auto;'>
     <div id='blog-title' style="color:#292929">{{blog.TITLE}}</div>
-    <div style="color:#757575;font-size:22px;margin-top: 20px;">{{blog.TITLE}}</div>
+    <div style="color:#757575;font-size:22px;margin-top: 20px;">{{blog.DESCRIPTION}}</div>
     <div id='blog-details'>
       <div style='display: flex;align-items: center;'>
         <img :src='blog.AUTHOR_IMAGE_URL' width='30' height='30'>
