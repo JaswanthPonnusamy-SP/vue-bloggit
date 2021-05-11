@@ -187,7 +187,7 @@
         <div id="bloggers-to-follow">
           <div id="bloggers-to-follow-title">BLOGGERS TO FOLLOW</div>
           <div id="profile-container">
-            <div class="profile" v-for="item in bloggersToFollow">
+            <div class="profile" v-for="item in bloggersToFollow" style="cursor: pointer;" @click="changeLocation(item.LINK)">
               <div class="img-container">
                 <img :src="item.IMAGE_URL" class="profile-img">
               </div>
