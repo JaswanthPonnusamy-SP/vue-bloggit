@@ -37,17 +37,17 @@ export default {
                   this.error.message = "Successfully followed."
                   this.follow = "Unfollow";
                   setTimeout(() => {
-                    this.error = false;
+                    this.error.show = false;
                     this.error.message = ""
-                  }, 3000);
+                  }, 2000);
                 } else {
                   this.error.show = true;
                   this.error.message = "Already following this account."
                   this.follow = "Unfollow";
                   setTimeout(() => {
-                    this.error = false;
+                    this.error.show = false;
                     this.error.message = ""
-                  }, 3000);
+                  }, 2000);
                 }
 
               });
@@ -62,9 +62,9 @@ export default {
                   this.error.message = "Successfully unfollowed."
                   this.follow = "Follow";
                   setTimeout(() => {
-                    this.error = false;
+                    this.error.show = false;
                     this.error.message = ""
-                  }, 3000);
+                  }, 2000);
                 }
 
               });
