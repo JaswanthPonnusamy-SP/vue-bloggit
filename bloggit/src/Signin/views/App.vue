@@ -1,5 +1,6 @@
 <template>
   <div style="background: #e3e8ee">
+    <div style="width: 1200px;margin: auto;">
   <Navbar
           name="Blogg It"
           :navLinks="[
@@ -10,7 +11,7 @@
           link: '/questions',
           dropdown: false
         },
-        { name: 'Signin', link: '/signin,html', dropdown: false },
+        { name: 'Signin', link: '/signin.html', dropdown: false },
          { name: 'Signup', link: '/signup.html', dropdown: false },
         // {
         //   name: 'Contacts',
@@ -26,6 +27,7 @@
   />
 
 <router-view></router-view>
+  </div>
   </div>
 </template>
 

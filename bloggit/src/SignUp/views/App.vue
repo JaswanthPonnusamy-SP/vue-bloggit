@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div style="background: #e3e8ee">
+    <div style="width: 1200px;margin: auto;">
   <Navbar
           name="Blogg It"
           :navLinks="[
@@ -24,6 +25,7 @@
       ]"
   />
 <router-view></router-view>
+  </div>
   </div>
 </template>
 

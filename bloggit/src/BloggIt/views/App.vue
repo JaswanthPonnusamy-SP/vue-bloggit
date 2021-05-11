@@ -1,4 +1,5 @@
 <template>
+  <div style="background: #e3e8ee">
   <div style="width: 1200px;margin: auto;">
     <nav>
       <div id="logo">
@@ -49,6 +50,7 @@
       </ul>
     </nav>
     <router-view></router-view>
+  </div>
   </div>
 </template>
 

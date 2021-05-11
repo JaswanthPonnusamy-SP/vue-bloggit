@@ -187,18 +187,11 @@
         <div id="bloggers-to-follow">
           <div id="bloggers-to-follow-title">BLOGGERS TO FOLLOW</div>
           <div id="profile-container">
-            <div class="profile" v-for="item in bloggersToFollow" style="cursor: pointer;" @click="changeLocation(item.LINK)">
-              <div class="img-container">
-                <img :src="item.IMAGE_URL" class="profile-img">
-              </div>
-              <div class="profile-text-container">
-                <div class="profile-title">{{ item.USERNAME }}</div>
-                <div class="profile-description">{{ item.DESCRIPTION }}</div>
-              </div>
-              <div class="profile-button-container">
-                <div class="profile-follow-button">Follow</div>
-              </div>
-            </div>
+            <template v-if="bloggersToFollow.length!==0">
+            <template v-for="item in bloggersToFollow">
+              <profile :data="item"></profile>
+            </template>
+            </template>
         </div>
         <div id="topics-to-follow">
           <div id="topics-title">TOPICS TO FOLLOW</div>
@@ -295,10 +288,11 @@
 <script>
 // @ is an alias to /src
 
+import profile from '../views/profileComponent';
 
 export default {
   name: 'Home',
-  components: {},
+  components: {profile},
   data(){
     return{
       top1:{},
@@ -306,16 +300,6 @@ export default {
       bloggersToFollow:[],
       popularBlogs:[],
       creatorToFollow:[
-        {
-          USERNAME:"Jaswanth",
-          DESCRIPTION:"I'm not a hacker",
-          IMAGE_URL:"http://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic.jpg"
-        },
-        {
-          USERNAME:"Venkatesh prasath",
-          DESCRIPTION:"A backend developer",
-          IMAGE_URL:"http://med.gov.bz/wp-content/uploads/2020/08/dummy-profile-pic.jpg"
-        }
       ],
       options: [{
         value: 1,
@@ -405,12 +389,12 @@ export default {
       });
     });
   },
-  methods:{
-    changeLocation(url){
-      window.location.href=url;
-    },
-     GET(url) {
-  return new Promise(function(resolve, reject) {
+      methods:{
+         changeLocation(url){
+           window.location.href=url;
+         },
+         GET(url) {
+           return new Promise(function(resolve, reject) {
 
     const request = new XMLHttpRequest();
 
