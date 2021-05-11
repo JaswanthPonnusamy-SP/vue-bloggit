@@ -27,6 +27,9 @@ export default {
   data(){
 return{blog:{}}
   },
+  mounted() {
+    this.getUserBlogs();
+  },
   computed:{
     showId() {
       return this.$route.params.id;
