@@ -20,7 +20,7 @@
           </svg>
         </li>
         <li>
-          <svg @click="window.location.href='https://localhost:8080/Bloggit.html'" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg @click="changeLocation('https://localhost:8080/Bloggit.html')" width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="Desktop-HD" transform="translate(-1006.000000, -472.000000)" fill="#000000" fill-rule="nonzero">
                 <g id="fluent-save-copy-24-regular" transform="translate(1004.000000, 470.000000)">
@@ -60,6 +60,11 @@
 export default {
   name: 'app',
   components: {
+  },
+  methods:{
+    changeLocation(url){
+      window.location.href=url;
+    }
   }
 }
 </script>
