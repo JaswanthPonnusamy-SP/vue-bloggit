@@ -1,79 +1,104 @@
 <template>
-  <div>
-  <Navbar
-          name="Blogg It"
-          :navLinks="[
+  <div style="width: 1200px;margin: auto;">
+    <nav>
+      <div id="logo">
+        Blogg It
+      </div>
 
-        { name: 'About', link: '/', dropdown: false },
-        {
-          name: 'Home',
-          link: '/questions',
-          dropdown: false
-        },
-        { name: 'Bloggs', link: '/signin,html', dropdown: false },
-         { name: 'Profile', link: '/signup.html', dropdown: false },
-        // {
-        //   name: 'Contacts',
-        //   link: '/contact',
-        //   dropdown: true,
-        //   dropdownLinks: [
-        //     { name: 'A', link: '/pA', dropdown: false },
-        //     { name: 'B', link: '/pB', dropdown: false },
-        //   ],
-        // },
+      <ul class="nav-links">
+        <li>
+          <svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Desktop-HD" transform="translate(-1093.000000, -467.000000)" fill="#000000" fill-rule="nonzero">
+                <g id="carbon-search" transform="translate(1092.000000, 466.000000)">
+                  <path d="M22.65625,21.5515625 L16.75625,15.6515625 C19.7015885,12.1156323 19.3447838,6.88846095 15.946281,3.78555905 C12.5477782,0.682657153 7.30979525,0.80167397 4.05573461,4.05573461 C0.80167397,7.30979525 0.682657153,12.5477782 3.78555905,15.946281 C6.88846095,19.3447838 12.1156323,19.7015885 15.6515625,16.75625 L21.5515625,22.65625 L22.65625,21.5515625 Z M3.125,10.15625 C3.125,6.27299785 6.27299785,3.125 10.15625,3.125 C14.0395021,3.125 17.1875,6.27299785 17.1875,10.15625 C17.1875,14.0395021 14.0395021,17.1875 10.15625,17.1875 C6.27478268,17.1831944 3.12930557,14.0377173 3.125,10.15625 L3.125,10.15625 Z" id="Shape"></path>
+                  <rect id="Rectangle" fill-opacity="0" x="0" y="0" width="25" height="25"></rect>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </li>
+        <li>
+          <svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Desktop-HD" transform="translate(-1006.000000, -472.000000)" fill="#000000" fill-rule="nonzero">
+                <g id="fluent-save-copy-24-regular" transform="translate(1004.000000, 470.000000)">
+                  <g id="Group" transform="translate(2.000000, 2.000000)">
+                    <path d="M18.496,3.627 C19.3971392,3.9436911 20,4.79483247 20,5.75 L20,15.75 C20,18.0972102 18.0972102,20 15.75,20 L5.75,20 C4.79483247,20 3.9436911,19.3971392 3.627,18.496 L5.724,18.5 L15.75,18.5 C17.2687831,18.5 18.5,17.2687831 18.5,15.75 L18.5,5.75 L18.496,5.699 L18.496,3.627 Z M15.246,0 C16.4886407,0 17.496,1.00735931 17.496,2.25 L17.496,15.247 C17.496,16.4896407 16.4886407,17.497 15.246,17.497 L2.25,17.497 C1.00735931,17.497 0,16.4896407 0,15.247 L0,2.25 C0,1.00735931 1.00735931,0 2.25,0 L15.247,0 L15.246,0 Z M2.25,1.5 C1.83578644,1.5 1.5,1.83578644 1.5,2.25 L1.5,15.247 C1.5,15.661 1.836,15.997 2.25,15.997 L15.247,15.997 C15.6612136,15.997 15.997,15.6612136 15.997,15.247 L15.997,2.25 C15.997,1.83578644 15.6612136,1.5 15.247,1.5 L2.25,1.5 Z M8.75,4.75 C9.16421356,4.75 9.5,5.08578644 9.5,5.5 L9.5,8 L12,8 C12.4142136,8 12.75,8.33578644 12.75,8.75 C12.75,9.16421356 12.4142136,9.5 12,9.5 L9.5,9.5 L9.5,12 C9.5,12.4142136 9.16421356,12.75 8.75,12.75 C8.33578644,12.75 8,12.4142136 8,12 L8,9.5 L5.5,9.5 C5.08578644,9.5 4.75,9.16421356 4.75,8.75 C4.75,8.33578644 5.08578644,8 5.5,8 L8,8 L8,5.5 C8,5.08578644 8.33578644,4.75 8.75,4.75 Z" id="Shape"></path>
+                  </g>
+                  <rect id="Rectangle" fill-opacity="0" x="0" y="0" width="24" height="24"></rect>
+                </g>
+              </g>
+            </g>
+          </svg></li>
+        <li>
+          <svg width="21px" height="23px" viewBox="0 0 21 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="clarity-notification-line" transform="translate(-2.000000, -1.000000)" fill="#000000" fill-rule="nonzero">
+                <path d="M22.5763889,19.3263889 C21.9067309,18.7294055 21.3204516,18.0450237 20.8333333,17.2916667 C20.3015434,16.2517692 19.982809,15.1161303 19.8958333,13.9513889 L19.8958333,10.5208333 C19.905344,6.73550646 17.0950957,3.53527665 13.3402778,3.05555556 L13.3402778,2.15972222 C13.3402778,1.64770824 12.9252084,1.23263889 12.4131944,1.23263889 C11.9011805,1.23263889 11.4861111,1.64770824 11.4861111,2.15972222 L11.4861111,3.06944444 C7.76688052,3.58347802 4.99937629,6.7662562 5.00694444,10.5208333 L5.00694444,13.9513889 C4.91996879,15.1161303 4.60123439,16.2517692 4.06944444,17.2916667 C3.59089028,18.043298 3.01402402,18.7275968 2.35416667,19.3263889 C2.20431649,19.4580346 2.11830814,19.6477589 2.11805556,19.8472222 L2.11805556,20.7916667 C2.11805556,21.1751977 2.42896892,21.4861111 2.8125,21.4861111 L22.1180556,21.4861111 C22.5015866,21.4861111 22.8125,21.1751977 22.8125,20.7916667 L22.8125,19.8472222 C22.8122474,19.6477589 22.7262391,19.4580346 22.5763889,19.3263889 L22.5763889,19.3263889 Z M3.5625,20.0972222 C4.20861707,19.4730576 4.77749878,18.7736129 5.25694444,18.0138889 C5.92681387,16.7579689 6.31766077,15.372239 6.40277778,13.9513889 L6.40277778,10.5208333 C6.32778455,8.30472314 7.4672703,6.22409088 9.37495354,5.09381965 C11.2826368,3.96354843 13.6548632,3.96354843 15.5625465,5.09381965 C17.4702297,6.22409088 18.6097154,8.30472314 18.5347222,10.5208333 L18.5347222,13.9513889 C18.6198392,15.372239 19.0106861,16.7579689 19.6805556,18.0138889 C20.1600012,18.7736129 20.7288829,19.4730576 21.375,20.0972222 L3.5625,20.0972222 Z" id="Shape"></path>
+                <path d="M12.5,23.8055556 C13.4032069,23.7847568 14.159942,23.1160141 14.2916667,22.2222222 L10.6388889,22.2222222 C10.7745878,23.1419461 11.5704164,23.8189943 12.5,23.8055556 Z" id="Path"></path>
+                <rect id="Rectangle" fill-opacity="0" x="0" y="0" width="25" height="25"></rect>
+              </g>
+            </g>
+          </svg></li>
 
-      ]"
-  />
+        <li style="margin-right: 0 !important;">
+          <img id="image" src="https://miro.medium.com/fit/c/64/64/0*d77f12-7zU6s-B_f.jpg">
+        </li>
 
-<router-view></router-view>
+      </ul>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
-  import Navbar from '../../Common/components/Navbar';
 
 export default {
   name: 'app',
   components: {
-    Navbar
+
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+svg{
+  width: 20px;
+  height: 20px;
 }
 
-#nav {
-  padding: 30px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  line-height: 107px;
+  /*font-family: 'Montserrat', sans-serif;*/
 }
-#nav a {
+nav div#logo {
+  color: black;
   font-weight: bold;
-  color: #2c3e50;
-  margin-left: 20px;
-  margin-right: 20px;
+  font-size: 30px;
 }
-#nav a.router-link-exact-active {
-  color: #42b983;
+ul.nav-links {
+  display: flex;
+  justify-content: space-between;
+  line-height: 75px;
+}
+ul.nav-links li {
+  list-style: none;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
 }
 
-  #end-container{
-    margin-top: 135px;
-    background-color: #f7f7f7;
-    width: 100%;
-    height: 323px;
-    display: flex;justify-content: center;align-items: center;
-  }
-
-  #end-text{
-    font-size: 25px;
-    font-weight: bolder;
-  }
-
+#image{
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
 </style>
 
 

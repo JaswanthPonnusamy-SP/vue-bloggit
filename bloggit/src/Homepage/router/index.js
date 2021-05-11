@@ -4,12 +4,12 @@ import Home from '../views/Home'
 
 const routes = [
   {
-    path: '/Portfolio/homepage.html',
+    path: '/homepage.html',
     name: 'Root',
     component:Home
   },
   {
-    path: '/Portfolio/signin.html',
+    path: '/signin.html',
     name: 'Root1',
     component:()=>import('../../Signin/views/signIn')
   }

@@ -15,11 +15,11 @@ module.exports={
             title: 'signin',                                    // NO I18N
             chunks: ['chunk-vendors', 'chunk-common', 'signin']  // NO I18N
         },
-        bloggit   : {
+        blogs   : {
             entry: './src/BloggIt/main.js',       // NO I18N
-            filename: 'bloggit.html',                               // NO I18N
-            title: 'bloggit',                                    // NO I18N
-            chunks: ['chunk-vendors', 'chunk-common', 'bloggit']  // NO I18N
+            filename: 'blogs',                               // NO I18N
+            title: 'blogs',                                    // NO I18N
+            chunks: ['chunk-vendors', 'chunk-common', 'blogs']  // NO I18N
         },
         signup   : {
             entry: './src/SignUp/main.js',       // NO I18N
@@ -104,12 +104,12 @@ module.exports={
         //         // ca: fs.readFileSync('/path/to/ca.pem'),
         //     }
         // }
-        proxy : {
-            '/':{
-                target:'http://localhost:8080',
-                changeOrigin:true
-            }
-        } // NO I18N
+        // proxy : {
+        //     '/':{
+        //         target:'http://localhost:8080',
+        //         changeOrigin:true
+        //     }
+        // } // NO I18N
         // proxy :'http://192.168.1.5:8010' // NO I18N
     }
 }

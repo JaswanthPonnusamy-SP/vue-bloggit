@@ -1,7 +1,7 @@
 <template>
   <div style="width: 1200px;height: calc(100vh - 107px);margin: auto;display: flex;flex-direction: column;background: white;">
     <div style="width: 100%;height: 190px;margin-top: 50px;display: flex;flex-direction: column;align-items: center;">
-      <img src="https://contacts.zoho.com/file?t=user&fs=thumb&ID=689624445" height="106" width="106" style="border-radius: 50%;">
+      <img :src="profile.IMAGE_URL" height="106" width="106" style="border-radius: 50%;">
       <div style="font-size: 26px;font-weight: 500;color: black;margin-top: 5px;">{{ profile.USER_NAME }}</div>
       <div style="font-size: 13px;font-weight: 500;color: #4755A9;margin-top: 20px;margin-bottom: 20px;">
         {{ profile.EMAIL }}</div>
@@ -180,6 +180,7 @@
         }
       },
       getUserBlogs(){
+	  this.popularBlogs=[];
         this.GET("/ProfileBlogs?userid="+this.showId).then((message)=>{
           let jsonObj=JSON.parse(message);
           jsonObj.DATA.forEach((element)=>{
@@ -188,6 +189,7 @@
         });
       },
       getFollowing(){
+	  this.following=[];
         this.GET("/ShowFollowing?userid="+this.showId).then((message)=>{
           let jsonObj=JSON.parse(message);
           jsonObj.DATA.forEach((element)=>{
@@ -197,7 +199,8 @@
         });
       },
       getFollowers(){
-        this.GET("/ShowFollowers?userid="+this.showId).then((message)=>{
+	  this.followers=[];
+        this.GET("/ShowFollower?userid="+this.showId).then((message)=>{
           let jsonObj=JSON.parse(message);
           jsonObj.DATA.forEach((element)=>{
             this.followers.push(element);

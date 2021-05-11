@@ -1,12 +1,13 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Bloggit from '../views/bloggIt'
+import Bloggit from '../views/blog'
 
 
 const routes = [
   {
-    path: '/bloggit.html',
+    path: '/blogs/:id',
     name: 'bloggit',
-    component:Bloggit
+    component:Bloggit,
+    props: true
   }
 ]
 
