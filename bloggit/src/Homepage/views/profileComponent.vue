@@ -9,7 +9,7 @@
       <div class="profile-description">{{ data.DESCRIPTION }}</div>
     </div>
     <div class="profile-button-container">
-      <div class="profile-follow-button" :style="follow==='Follow'?'cursor: pointer;':'cursor: pointer;background: #409eff;border-color: #409eff;'" @click="followww(data.LINK.split('/')[data.LINK.split('/').length-1])">{{follow}}</div>
+      <div class="profile-follow-button" :style="follow==='Follow'?'cursor: pointer;':'cursor: pointer;background: #409eff;border-color: #409eff;'" @click="followww()">{{follow}}</div>
     </div>
   </div>
 </template>
@@ -24,7 +24,8 @@ export default {
     return{error:{show:false,message:""},follow:"Follow"}
   },
   methods:{
-      followww(userId) {
+      followww() {
+        let userId=this.data.LINK.split('/')[this.data.LINK.split('/').length-1];
         if(this.follow==="Follow") {
           this.GET("/Follow?userid=" + userId).then(
               (message) => {
